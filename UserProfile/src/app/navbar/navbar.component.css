@@ -1,6 +1,25 @@
 .offcanvas-title {
-    color: #fff;
+    color: #000;
 }
+
 .navbar ul li a {
-    color: #fff;
+    color: #000;
+}
+
+.offcanvas-body {
+    /* background: #157eab; */
+}
+
+.offcanvas {
+    width: 300px;
+}
+
+.offcanvas-body ul li:hover {
+    background-color: #fff;
+    opacity: 1;
+}
+
+.offcanvas-body ul li:hover,
+a {
+    color: #000;
 }
