@@ -7,6 +7,7 @@ import { CompanyComponent } from './components/company/company.component';
 const routes: Routes = [
   { path: "", pathMatch: "full", redirectTo: "/user"},
   { path: "user", component: UserprofileComponent},
+  { path: "user/:id", component: UserprofileComponent},
   { path: 'address', component: AddressComponent},
   { path: 'company', component: CompanyComponent},
 ];
