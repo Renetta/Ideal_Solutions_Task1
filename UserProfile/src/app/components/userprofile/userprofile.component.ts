@@ -16,8 +16,11 @@ export class UserprofileComponent  implements OnInit{
   ngOnInit(): void {
     this.userService.fetchUsers().subscribe((data) => {
       this.users = data;
-      console.log(data);
     })
+  }
+
+  showSelectdUser = (user: users) => {
+    this.userService.getUserDetails(user);
   }
 
   

@@ -1,1 +1,59 @@
-<p>address works!</p>
+<ng-container *ngIf="userId">
+    <div class="container">
+        <h3>Details of {{selectedUser?.name}}</h3>
+        <div class="container bg-light">
+            <div class="row">
+                <div class="col-md-4 border border-right-1">
+                    <img src="/assets/images/logo.png" alt srcset
+                        class="img-fluid rounded text-center" width="200">
+                    <p class="fs-4 text-start fw-bold">{{selectedUser?.name}}</p>
+                </div>
+                <div class="col-md-4  border border-right-1">
+                    <p class="fw-bold mt-5">Contact Details</p>
+                    <p>Street: {{selectedUser?.address.street}}</p>
+                    <p>Suite: {{selectedUser?.address.suite}}</p>
+                    <p>city: {{selectedUser?.address.city}}</p>
+                    <p>Zipcode {{selectedUser?.address.zipcode}}</p>
+                </div>
+                <div class="col-md-4  mt-5">
+                    <p class="fw-bold">Company Details Details</p>
+                    <p>Company Name: {{selectedUser?.company.name}}</p>
+                    <p>Catch Phrase: {{selectedUser?.company.catchPhrase}}</p>
+                    <p>Bs: {{selectedUser?.company.bs}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="!selectedUser">
+    <div class="container">
+        <h3>USER CONTACT DETAILS</h3>
+        <table class="table table-info">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Street</th>
+                    <th>Suite</th>
+                    <th>City</th>
+                    <th>Zipcode</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let addr of address; let i = index;"
+                    class="table-warning">
+                    <td>{{i + 1}}</td>
+                    <td>{{addr.user.name}}</td>
+                    <td>{{addr.street}}</td>
+                    <td>{{addr.suite}}</td>
+                    <td>{{addr.city}}</td>
+                    <td>{{addr.zipcode}}</td>
+                    <td>{{addr.geo.lat}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</ng-container>
