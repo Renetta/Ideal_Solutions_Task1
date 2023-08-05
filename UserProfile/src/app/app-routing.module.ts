@@ -5,9 +5,9 @@ import { AddressComponent } from './components/address/address.component';
 import { CompanyComponent } from './components/company/company.component';
 
 const routes: Routes = [
-  { path: "", pathMatch: "full", redirectTo: "/user"},
-  { path: "user", component: UserprofileComponent},
-  { path: "user/:id", component: UserprofileComponent},
+  { path: "", pathMatch: "full", redirectTo: "/users"},
+  { path: "users", component: UserprofileComponent},
+  { path: "users/:id", component: UserprofileComponent},
   { path: 'address', component: AddressComponent},
   { path: 'company', component: CompanyComponent},
 ];

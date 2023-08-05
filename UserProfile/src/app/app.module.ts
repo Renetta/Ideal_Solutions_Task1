@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { UserprofileComponent } from './components/userprofile/userprofile.component';
 import { AddressComponent } from './components/address/address.component';
 import { CompanyComponent } from './components/company/company.component';
+import { UsersService } from './services/users.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { CompanyComponent } from './components/company/company.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
