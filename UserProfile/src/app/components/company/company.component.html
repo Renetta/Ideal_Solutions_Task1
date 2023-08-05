@@ -1,1 +1,23 @@
-<p>company works!</p>
+<div class="container">
+    <h3>COMPANY PROFILE</h3>
+    <table class="table table-info">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Company Name</th>
+                <th>Catch Phrase</th>
+                <th>Bs</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of company; let i = index;" class="table-warning">
+                <td>{{i + 1}}</td>
+                <td>{{item.user.name}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.catchPhrase}}</td>
+                <td>{{item.bs}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

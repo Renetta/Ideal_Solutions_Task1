@@ -10,4 +10,6 @@
 : create a modal for users, address, geo, company
 : created a modal for user with name and id only for accessing the name of user in the address and comapny details.
 : created a service for fetching the datas from json by using http client and added map functionality for securing the data from json and added into an array and subscribe this observable while fetching the data.
-: 
+: creatd a component for showing user details by passing user id on the navigation url
+: showing company details in company component template 
+
