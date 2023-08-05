@@ -9,6 +9,7 @@ import { AddressComponent } from './components/address/address.component';
 import { CompanyComponent } from './components/company/company.component';
 import { UsersService } from './services/users.service';
 import { HttpClientModule } from '@angular/common/http';
+import { UserDetailsComponent } from './components/user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     UserprofileComponent,
     AddressComponent,
-    CompanyComponent
+    CompanyComponent,
+    UserDetailsComponent
   ],
   imports: [
     BrowserModule,
