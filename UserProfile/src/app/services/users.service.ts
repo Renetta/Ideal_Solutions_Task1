@@ -11,16 +11,16 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   fetchUsers() {
-    return this.http.get<{[key: string]: users}>('./assets/data.json')
-    .pipe(map((res) => {
-      const users = [];
-      for(const key in res) {
-        if (res.hasOwnProperty(key)) {
-          users.push({...res[key], id: key})
+    return this.http.get<{ [key: string]: users }>('./assets/data.json')
+      .pipe(map((res) => {
+        const users = [];
+        for (const key in res) {
+          if (res.hasOwnProperty(key)) {
+            users.push({ ...res[key], id: key })
+          }
         }
-      }
-      return users;
-    }));
+        return users;
+      }));
   }
 
   onUserCLicked = new EventEmitter<users>()
